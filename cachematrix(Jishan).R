@@ -64,3 +64,31 @@ cacheSolve(sample_matrix)
 
 sample_matrix$getInverse()
 
+> # Sample testing: 
+> 
+> sample_matrix <- makeCacheMatrix(matrix(5:8, 2, 2))
+> 
+> sample_matrix$get()
+     [,1] [,2]
+[1,]    5    7
+[2,]    6    8
+> 
+> sample_matrix$getInverse()
+NULL
+> 
+> cacheSolve(sample_matrix)
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> 
+> cacheSolve(sample_matrix)
+getting cached data
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> 
+> sample_matrix$getInverse()
+     [,1] [,2]
+[1,]   -4  3.5
+[2,]    3 -2.5
+> 
